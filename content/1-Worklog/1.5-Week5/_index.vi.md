@@ -5,55 +5,40 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Triển khai AWS Backup vào hệ thống.
+* Học cách khôi phục dữ liệu từ bản sao lưu và tự động hóa toàn bộ quy trình.
+* Thông báo kiểm tra khi các quy trình hoàn tất.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Tạo nhóm lưu trữ S3  <br> - Triển khai cơ sở hạ tầng                                                                                | 15/05/2026   | 15/05/2026   | <https://000013.awsstudygroup.com/2-prerequiste/2.1-creates3bucket/>   |
+| 7   | - Lập kế hoạch dự phòng                                         | 16/05/2026   | 16/05/2026      | <https://000013.awsstudygroup.com/3-createbackupplan/> |
+| 2   | - Thiết lập thông báo | 18/05/2026   | 18/05/2026      | <https://000013.awsstudygroup.com/4-enablenoti/> |
+| 3   | - Kiểm tra khôi phục               | 19/05/2026   | 19/05/2026      | <https://000013.awsstudygroup.com/5-testrestore/> |
+| 4   | - Sử dụng Cổng Lưu trữ Tệp               | 20/05/2026   | 20/05/2026      | <https://000024.awsstudygroup.com/2-prerequiste/> |
+| 5   | - Sử dụng AWS Storage Gateway               | 21/05/2026   | 21/05/2026      | <https://000024.awsstudygroup.com/2-useawsstoragegw/> |
+
 
 
 ### Kết quả đạt được tuần 5:
+* Tạo thành công nhóm lưu trữ Amazon S3 để phục vụ sao lưu dữ liệu hệ thống.
+* Triển khai cơ sở hạ tầng AWS Backup và cấu hình Backup Vault.
+* Thiết lập thông báo bằng Amazon SNS nhằm theo dõi trạng thái backup và restore.
+* Làm quen với AWS Storage Gateway và File Gateway để kết nối lưu trữ giữa môi trường local và AWS.
+* Hiểu được quy trình tự động hóa backup, restore và giám sát hệ thống trên AWS.
+* Ảnh minh họa:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+{{< figure src="/images/1-Worklog/1.5-Week5/createS3Bucket.png" title="Tạo nhóm lưu trữ S3" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/createFolder.png" title="Tạo thư mục" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/uploadFile.png" title="Tải lên tập tin" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/permissions.png" title="Chặn quyền truy cập công khai" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/editPolicy.png" title=" Chỉnh sửa chính sách nhóm lưu trữ" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/createBackUp.png" title="Tạo kế hoạch sao lưu" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/testRestore.png" title="Kiểm tra khôi phục" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/createStorageGateway.png" title="Tạo Cổng lưu trữ" >}}

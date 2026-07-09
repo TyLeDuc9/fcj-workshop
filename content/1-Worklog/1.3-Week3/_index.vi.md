@@ -5,55 +5,41 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Truy cập AWS Support.
+* Làm việc với Subnet, cổng Internet, cổng NAT.
+* Tìm hiểu về Tường lửa trong VPC.
+* Triển khai các phiên bản Amazon EC2.
+* Thiết lập kết nối VPN Site-to-Site trong AWS.
+
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 7   | - Truy cập hỗ trợ AWS                            | 02/05/2026   | 02/05/2026      | <https://000009.awsstudygroup.com/1-support-plans/>
+| CN   | - Tìm hiểu về mạng con, cổng Internet, tạo cổng NAT                                         | 03/05/2026   | 03/05/2026      | <https://000003.awsstudygroup.com/1-introduce/> |
+| 2   | - Tìm hiểu về Tường lửa trong VPC <br> - Tạo VPC, mạng subnet, cổng Internet, bảng định tuyến, nhóm bảo mật | 04/05/2026   | 04/05/2026      | <https://000003.awsstudygroup.com/2-firewallinvpc/> |
+| 3   | - Tạo EC2, kiểm tra kết nối, cổng NAT                  | 05/05/2026   | 05/05/2026      | <https://000003.awsstudygroup.com/4-createec2server//> |
+| 4   | -  Thiết lập DNS lai với bộ phân giải Route 53                                                                                         | 06/05/2026   | 06/05/2026      | <https://000010.awsstudygroup.com/1-introduce/> |
+| 5   | - Thiết lập DNS điểm đầu, điểm cuối                                                                                       | 07/05/2026   | 07/05/2026      | <https://000010.awsstudygroup.com/5-setuphyriddns/5.1-createoe/> |
 
 ### Kết quả đạt được tuần 3:
+* Hiểu cách tạo Subnet, cổng Internet, tạo cổng NAT.
+* Biết cách tạo EC2, kiểm tra kết nối.
+* Biết tạo cặp khóa, thiết lập DNS, tạo điểm đầu, điểm cuối.
+* Ảnh minh họa:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+{{< figure src="/images/1-Worklog/1.3-Week3/VPC.png" title="Tạo VPC" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/Subnet.png" title="Tạo Subnet" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/createInternet.png" title="Tạo cổng Internet" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/createRoute.png" title="Tạo Route" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/createSecurityGroup.png" title="Tạo nhóm bảo mật" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/createEC2.png" title="Tạo EC2" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/checkConnect.png" title="Kiểm tra kết nối" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/createKeyPair.png" title="Tạo cặp khóa" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/setUpDNS.png" title="Thiết lập điểm đầu DNS" >}}
+{{< figure src="/images/1-Worklog/1.3-Week3/setUpEndPointDNS.png" title="Thiết lập điểm cuối DNS" >}}

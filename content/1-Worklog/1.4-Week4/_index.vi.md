@@ -5,55 +5,37 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Thiết lập kết nối VPC Peering.
+* Thiết lập AWS Transit Gateway.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Khởi tạo mẫu CloudFormation <br> - Tạo nhóm bảo mật <br> - Tạo phiên bản EC2                                                                                          | 08/05/2026   | 08/05/2026  | <https://000019.awsstudygroup.com/2-prerequiste/>
+| 7   | - Cập nhật ACL mạng <br> - Kết nối VPC  <br> - DNS giữa các máy ngang hàng                                     | 09/05/2026   | 09/05/2026      | <https://000019.awsstudygroup.com/3-updatenetworkacl/> |
+| 2   | - Thiết lập AWS Transit Gateway <br> - Tạo Cổng trung chuyển | 11/05/2026   | 11/05/2026      | <https://000020.awsstudygroup.com/1-introduce/> |
+| 3   | - Tạo tệp đính kèm cổng trung chuyển <br> - Tạo bảng tuyến đường cổng trung chuyển                  | 12/05/2026   | 12/05/2026      | <https://000020.awsstudygroup.com/4-transigatewayattachments/> |
+| 4   | - Thêm các tuyến Transit Gateway vào bảng định tuyến VPC                          | 13/05/2026   | 13/05/2026      | <https://000020.awsstudygroup.com/6-result/> |
 
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu được cách thiết lập  AWS Transit Gateway và kết nối VPC Peering: 
+  * Cập nhật Route Table, Network ACL và DNS để đảm bảo kết nối hoạt động
+  * Tạo và cấu hình AWS Transit Gateway
+  * Thêm các tuyến vào bảng định tuyến của VPC
+  * Kiểm tra kết nối giữa các EC2 trong các VPC khác nhau
+  * Nắm được sự khác biệt giữa VPC Peering và AWS Transit Gateway
+* Ảnh minh họa:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+{{< figure src="/images/1-Worklog/1.4-Week4/createVPC.png" title="Tạo VPC" >}}
+{{< figure src="/images/1-Worklog/1.4-Week4/createHGVPC.png" title="Tạo nhóm bảo mật HG VPC" >}}
+{{< figure src="/images/1-Worklog/1.4-Week4/createEC2.png" title="Tạo phiên bản EC2" >}}
+{{< figure src="/images/1-Worklog/1.4-Week4/updateACL.png" title="Cập nhật ACL mạng" >}}
+{{< figure src="/images/1-Worklog/1.4-Week4/connectVPC.png" title="Kết nối VPC" >}}
+{{< figure src="/images/1-Worklog/1.4-Week4/createKeypair.png" title="Tạo cặp khóa" >}}
+{{< figure src="/images/1-Worklog/1.4-Week4/createTransitGateway.png" title="Tạo Cổng trung chuyển" >}}
+{{< figure src="/images/1-Worklog/1.4-Week4/createGatewayRoute.png" title="Tạo bảng tuyến đường cổng trung chuyển" >}}

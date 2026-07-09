@@ -1,47 +1,64 @@
 ---
-title: "Sharing and Feedback"
+
+title: "Feedback and Suggestions"
 date: 2024-01-01
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
----
+--------------------
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+## Overall Evaluation
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud Journey program. This will help the FCJ team improve any shortcomings based on the following aspects:
+### **1. Working Environment**
 
-### Overall Evaluation
+The working environment at the company is professional, dynamic, and provides excellent opportunities for interns to learn and develop their skills. Throughout my internship, I received dedicated guidance from my mentor and continuous support from team members whenever I encountered difficulties. In addition, the company gave me the opportunity to work with modern technologies and real-world workflows, which helped me strengthen my technical knowledge and gain valuable practical experience.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+### **2. Support from Mentor / Admin Team**
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+Throughout the internship, I received consistent guidance from my mentor and thoughtful support from the admin team. My mentor clearly explained technical concepts, provided effective approaches to problem-solving, and encouraged me to proactively research, ask questions, and propose my own solutions before receiving assistance. This approach significantly improved my critical thinking, problem-solving abilities, and independence.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+Meanwhile, the admin team provided timely support with administrative procedures, learning materials, and other internship-related matters, allowing me to focus on learning and successfully completing my assigned tasks.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+### **3. Relevance Between the Internship and My Major**
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+The tasks assigned during the internship were highly relevant to my major in Information Technology. They allowed me to apply the knowledge I had learned at university, particularly in computer systems, networking, cloud computing, and information security.
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+### **4. Learning Opportunities & Skill Development**
 
----
+During the internship, I had many opportunities to develop both technical knowledge and soft skills. Through hands-on labs and AWS-based projects, I gained practical experience in deploying, managing, and monitoring cloud computing systems in real-world environments. In addition, I improved essential skills such as teamwork, time management, technical research, analytical thinking, and problem-solving. The advice and feedback from my mentor also helped me gain a clearer understanding of my career path in the field of Information Technology.
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+### **5. Company Culture & Teamwork**
 
----
+The company promotes a professional, friendly, and collaborative working environment. Team members are always willing to share their experience, support one another, and work together to accomplish assigned tasks. As an intern, I always felt respected, welcomed, and encouraged to learn from experienced colleagues. This helped me integrate into the working environment quickly and become more confident throughout my internship.
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+### **6. Internship Policies & Benefits**
+
+The company provides interns with a supportive learning environment by offering comprehensive learning materials, a professional workplace, and dedicated guidance from mentors and team members. In addition, interns have opportunities to participate in training sessions conducted by experienced professionals and industry experts.
+
+## Additional Questions
+
+### **What was your most satisfying experience during the internship?**
+
+The most rewarding part of my internship was the opportunity to work in a professional environment and gain hands-on experience with AWS cloud services through practical labs and real-world projects. Furthermore, the dedicated support from my mentor and team members helped me adapt quickly and continuously improve my technical knowledge.
+
+### **What do you think the company could improve for future interns?**
+
+In my opinion, the company could organize more experience-sharing sessions, workshops, or seminars on emerging technologies and career development. In addition, increasing networking and interaction opportunities between interns and full-time employees would help future interns integrate into the company more quickly.
+
+### **Would you recommend this internship to your friends? Why?**
+
+Yes. I would definitely recommend this internship program to my friends because it offers a professional and friendly working environment that encourages interns to learn, develop technical skills, and gain valuable real-world experience. Moreover, the dedicated mentorship and the opportunity to work with modern technologies make this internship highly worthwhile.
+
+## Suggestions & Expectations
+
+### **Do you have any suggestions to improve the internship experience?**
+
+I hope the company can organize more advanced technical training sessions, knowledge-sharing seminars led by industry experts, and networking activities among different teams. These opportunities would allow interns to expand their knowledge, build professional relationships, and further improve their teamwork skills.
+
+### **Would you like to continue participating in this program in the future?**
+
+Yes. If given the opportunity, I would be very interested in joining future training programs or advanced internship opportunities at the company to further develop my knowledge, gain more practical experience, and continue building my career in cloud computing.
+
+### **Additional Comments**
+
+I would like to express my sincere gratitude to the company, my mentor, and all the team members for their continuous guidance and support throughout my internship. This experience has provided me with valuable knowledge and practical skills, serving as an important foundation for my future career in Information Technology.

@@ -5,53 +5,40 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Deploy AWS Backup for the system.
+* Learn how to restore data from backups and automate the backup and recovery process.
+* Configure notifications to monitor backup and restore operations.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks Completed This Week:
 
+| Day | Tasks | Start Date | Completion Date | Reference |
+| --- | ----- | ---------- | --------------- | --------- |
+| Fri | - Create an Amazon S3 bucket.<br>- Deploy the required infrastructure. | 15/05/2026 | 15/05/2026 | <https://000013.awsstudygroup.com/2-prerequiste/2.1-creates3bucket/> |
+| Sat | - Create an AWS Backup Plan. | 16/05/2026 | 16/05/2026 | <https://000013.awsstudygroup.com/3-createbackupplan/> |
+| Mon | - Configure backup notifications. | 18/05/2026 | 18/05/2026 | <https://000013.awsstudygroup.com/4-enablenoti/> |
+| Tue | - Test the restore process. | 19/05/2026 | 19/05/2026 | <https://000013.awsstudygroup.com/5-testrestore/> |
+| Wed | - Use AWS File Gateway. | 20/05/2026 | 20/05/2026 | <https://000024.awsstudygroup.com/2-prerequiste/> |
+| Thu | - Use AWS Storage Gateway. | 21/05/2026 | 21/05/2026 | <https://000024.awsstudygroup.com/2-useawsstoragegw/> |
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully created an **Amazon S3 bucket** to store system backup data.
+* Deployed the **AWS Backup** infrastructure and configured a **Backup Vault**.
+* Configured **Amazon SNS** notifications to monitor backup and restore operations.
+* Gained hands-on experience with **AWS Storage Gateway** and **File Gateway** for integrating on-premises storage with AWS.
+* Understood the automated workflow for backup, restore, and system monitoring on AWS.
 
-* Successfully created and configured an AWS Free Tier account.
+### Screenshots:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+{{< figure src="/images/1-Worklog/1.5-Week5/createS3Bucket.png" title="Create an Amazon S3 Bucket" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/createFolder.png" title="Create a Folder" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/uploadFile.png" title="Upload a File" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/permissions.png" title="Block Public Access" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/editPolicy.png" title="Edit the Bucket Policy" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/createBackUp.png" title="Create a Backup Plan" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/testRestore.png" title="Test Data Restoration" >}}
+{{< figure src="/images/1-Worklog/1.5-Week5/createStorageGateway.png" title="Create an AWS Storage Gateway" >}}

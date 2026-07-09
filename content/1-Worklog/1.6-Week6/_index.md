@@ -5,53 +5,38 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+  ### Week 6 Objectives:
 
-### Week 6 Objectives:
+* Get started with Amazon S3.
+* Learn how to create and manage Amazon S3 buckets.
+* Practice uploading, downloading, and managing objects in Amazon S3.
+* Configure bucket permissions and security policies.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks Completed This Week:
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Tasks | Start Date | Completion Date | Reference |
+| --- | ----- | ---------- | --------------- | --------- |
+| Fri | - Create an Amazon S3 bucket.<br>- Upload files to the bucket. | 22/05/2026 | 22/05/2026 | <https://000057.awsstudygroup.com/2-prerequiste/> |
+| Sat | - Enable Static Website Hosting.<br>- Configure Block Public Access settings. | 23/05/2026 | 23/05/2026 | <https://000057.awsstudygroup.com/4-blockpublicaccess/> |
+| Mon | - Configure public object access.<br>- Test the static website. | 25/05/2026 | 25/05/2026 | <https://000057.awsstudygroup.com/6-testwebsite/> |
+| Tue | - Accelerate the static website using Amazon CloudFront. | 26/05/2026 | 26/05/2026 | <https://000057.awsstudygroup.com/7-cloudfront/> |
+| Wed | - Enable bucket versioning.<br>- Move objects within the bucket. | 27/05/2026 | 27/05/2026 | <https://000057.awsstudygroup.com/9-moveobject/> |
+| Thu | - Configure Cross-Region Replication (CRR). | 28/05/2026 | 28/05/2026 | <https://000057.awsstudygroup.com/10-s3ccr/> |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully created an **Amazon S3 bucket** and performed file upload and download operations.
+* Configured **Static Website Hosting** to deploy a static website on Amazon S3.
+* Successfully tested and accessed the static website using the S3 website endpoint.
+* Integrated **Amazon CloudFront** to improve website performance and reduce content delivery latency.
+* Gained practical experience with core Amazon S3 management tasks and features for hosting static websites on AWS.
 
-* Successfully created and configured an AWS Free Tier account.
+### Screenshots:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+{{< figure src="/images/1-Worklog/1.6-Week6/createBucketS3.png" title="Create an Amazon S3 Bucket" >}}
+{{< figure src="/images/1-Worklog/1.6-Week6/uploadFile.png" title="Upload Files" >}}
+{{< figure src="/images/1-Worklog/1.6-Week6/enableStaticWebsite.png" title="Enable Static Website Hosting" >}}
+{{< figure src="/images/1-Worklog/1.6-Week6/configuringPublicAccessBlock.png" title="Configure Block Public Access" >}}
+{{< figure src="/images/1-Worklog/1.6-Week6/configuringPublicObjects.png" title="Configure Public Object Access" >}}
+{{< figure src="/images/1-Worklog/1.6-Week6/testWebsite.png" title="Test the Static Website" >}}

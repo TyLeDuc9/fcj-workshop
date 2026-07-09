@@ -5,55 +5,41 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Quản lý chi phí với AWS Budget.
+* Sử dụng ngân sách, lập ngân sách RI và tiết kiệm.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Lập ngân sách                                                                           | 24/04/2025   | 24/04/2025  | <https://000007.awsstudygroup.com/1-create-budget/>
+| 7   | - Lập ngân sách chi phí <br>                                            | 25/04/2025   | 25/04/2025      | <https://000007.awsstudygroup.com/2-cost-budgets/> |
+| 2   | - Lập ngân sách sử dụng  <br> | 27/04/2025   | 27/04/2025      | <https://000007.awsstudygroup.com/3-usage-budget/> |
+| 3   | - Lập ngân sách RI                  | 28/04/2025   | 28/04/2025      | <https://000007.awsstudygroup.com/4-reservation-budget/> |
+| 4   | - Lập kế hoạch tiết kiệm ngân sách <br>                                                                 | 29/04/2025   | 29/04/2025      | <https://000007.awsstudygroup.com/5-saving-plans-budget/> |
 
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu được cách sử dụng dịch vụ AWS Budgets để quản lý chi phí.
+* Tạo được các loại ngân sách cơ bản:
+  * Ngân sách chi phí (Cost Budget)
+  * Ngân sách sử dụng (Usage Budget)
+  * Ngân sách RI (Reservation Budget)
+* Hiểu được EC2.
+* Triển khai ứng dụng Node.js trên Amazon EC2 Windows.
+* Tìm hiểu dịch vụ cơ sở dữ liệu quan hệ của Amazon.
+* Ảnh minh họa:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+{{< figure src="/images/1-Worklog/1.2-Week2/createBudget.png" title="Lập ngân sách" >}}
+{{< figure src="/images/1-Worklog/1.2-Week2/historyBudget.png" title="Xem lịch sử ngân sách" >}}
+{{< figure src="/images/1-Worklog/1.2-Week2/costBudget.png" title="Tạo ngân sách chi phí" >}}
+{{< figure src="/images/1-Worklog/1.2-Week2/createSucessCostBudget.png" title="Tạo thành công ngân sách chi phí" >}}
+{{< figure src="/images/1-Worklog/1.2-Week2/usageBudget.png" title="Lập ngân sách sử dụng" >}}
+{{< figure src="/images/1-Worklog/1.2-Week2/RIBudget.png" title="Lập ngân sách RI" >}}
+{{< figure src="/images/1-Worklog/1.2-Week2/saveBudget.png" title="Lập kế hoạch tiết kiệm ngân sách" >}}
 
 

@@ -5,111 +5,247 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+# Sports Field Booking System
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+## AWS-Based Web Application Deployment Solution
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+The Sports Field Booking System is designed to help users search for sports fields, make online reservations, and manage their booking history through a web-based platform. The system is deployed on AWS using a multi-tier architecture to ensure high availability, security, and scalability.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+The architecture uses Amazon ECS to deploy the application as containers, Amazon RDS as the relational database, Redis for caching, Amazon S3 for storing static files and images, Amazon CloudFront for fast content delivery, and Amazon Route 53 for DNS management. The application is protected by AWS WAF, while AWS Certificate Manager provides SSL/TLS certificates.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+---
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+## 2. Problem Statement
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+### Current Challenges
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+Many sports facilities still manage reservations using phone calls or paper-based records, resulting in:
+
+- Difficult reservation management.
+- Double-booking conflicts.
+- No centralized payment or reservation management system.
+- Poor scalability as the number of sports fields increases.
+- Limited availability during periods of high user traffic.
+
+### Proposed Solution
+
+Deploy the system on AWS using a cloud-native architecture.
+
+Users access the website through Amazon Route 53 and Amazon CloudFront.
+
+CloudFront works together with AWS WAF to accelerate content delivery and protect against web attacks.
+
+Application Load Balancer distributes incoming requests to containers running on Amazon ECS.
+
+The application accesses an Amazon RDS database located in a private subnet.
+
+Redis is used to cache frequently accessed data, reducing database workload.
+
+Images and static assets are stored in Amazon S3.
+
+Amazon ECR stores Docker images for the application.
+
+AWS Secrets Manager securely stores database credentials and application secrets.
+
+Amazon CloudWatch monitors the entire system and sends alerts through Amazon SNS.
+
+### Benefits
+
+- Automatic system scaling.
+- High-level security.
+- High availability.
+- Simplified deployment of new application versions.
+- Reduced infrastructure management effort.
+- Improved performance through CloudFront and Redis caching.
+
+---
+
+## 3. Solution Architecture
+
+The system is deployed within an Amazon VPC consisting of public and private subnets across two Availability Zones to provide high availability.
+
+The workflow is as follows:
+
+1. Users access the website through Amazon Route 53.
+
+2. Amazon CloudFront delivers content with lower latency.
+
+3. AWS WAF inspects and filters malicious requests.
+
+4. Valid requests are forwarded to the Application Load Balancer.
+
+5. The ALB distributes traffic to containers running on Amazon ECS.
+
+6. Amazon ECS processes the application logic.
+
+7. Data is stored in the primary Amazon RDS database.
+
+8. Redis caches frequently accessed data.
+
+9. Amazon RDS Multi-AZ standby in the second Availability Zone provides failover capability.
+
+10. Amazon S3 stores the frontend application and user-uploaded files.
+
+11. Docker images are stored in Amazon ECR.
+
+12. AWS Secrets Manager securely manages database credentials.
+
+13. Amazon CloudWatch monitors all AWS resources.
+
+14. Amazon SNS sends email notifications to administrators when system issues occur.
+
+![System Architecture](/images/2-Proposal/platform_architecture1.jpg)
 
 ### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+
+- Amazon Route 53
+- Amazon CloudFront
+- AWS WAF
+- AWS Certificate Manager
+- Amazon S3
+- Amazon VPC
+- Public Subnet
+- Private Subnet
+- NAT Gateway
+- Application Load Balancer
+- Amazon ECS
+- Amazon RDS
+- Amazon ElastiCache for Redis
+- Amazon ECR
+- AWS Secrets Manager
+- Amazon CloudWatch
+- Amazon SNS
 
 ### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+**Edge Layer**
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+- Amazon Route 53 manages DNS.
+- Amazon CloudFront delivers content globally.
+- AWS WAF protects the web application.
+- AWS Certificate Manager provides SSL/TLS certificates.
+- Amazon S3 stores the frontend application and uploaded files.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+**Application Layer**
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+- Application Load Balancer distributes incoming traffic.
+- Amazon ECS runs the backend services.
+- Amazon ECR stores Docker images.
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+**Database Layer**
 
-Total: $0.7/month, $8.40/12 months
+- Amazon RDS Primary Database.
+- Amazon RDS Multi-AZ Standby Database.
+- Redis Cache.
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+**Monitoring Layer**
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+- Amazon CloudWatch monitors system resources.
+- Amazon SNS sends email notifications and alerts.
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+---
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+## 4. Technical Implementation
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+### Phase 1
+
+- Requirement analysis.
+- Database design.
+- AWS architecture design.
+
+### Phase 2
+
+- Create Amazon VPC.
+- Configure subnets.
+- Deploy NAT Gateway.
+- Configure Security Groups.
+
+### Phase 3
+
+- Deploy Amazon ECS.
+- Push Docker images to Amazon ECR.
+- Configure the Application Load Balancer.
+
+### Phase 4
+
+- Deploy Amazon RDS.
+- Configure Redis.
+- Configure AWS Secrets Manager.
+
+### Phase 5
+
+- Configure Amazon CloudFront.
+- Configure Amazon Route 53.
+- Configure AWS WAF.
+- Configure AWS Certificate Manager.
+
+### Phase 6
+
+- Configure Amazon CloudWatch.
+- Configure Amazon SNS.
+- Perform system testing.
+- Deploy the system to production.
+
+---
+
+## 5. Implementation Timeline
+
+| Phase | Activities |
+|--------|------------|
+| Month 1 | System design |
+| Month 2 | Backend and database development |
+| Month 3 | Deploy Amazon ECS and Amazon RDS |
+| Month 4 | System testing and production deployment |
+
+---
+
+## 6. Estimated Budget
+
+The estimated costs include:
+
+- Amazon ECS
+- Amazon RDS
+- Amazon ElastiCache
+- Amazon CloudFront
+- Amazon Route 53
+- Amazon S3
+- NAT Gateway
+- Application Load Balancer
+- Amazon CloudWatch
+- Amazon SNS
+
+The total cost depends on the ECS configuration, database size, and actual traffic volume.
+
+---
+
+## 7. Risk Assessment
+
+### Risks
+
+- Amazon ECS service failure.
+- Database overload.
+- Redis failure.
+- DDoS attacks.
+- Database storage exhaustion.
+
+### Mitigation Strategies
+
+- Deploy ECS across multiple Availability Zones.
+- Enable Amazon RDS Multi-AZ.
+- Use Amazon CloudFront to reduce backend traffic.
+- Protect the application with AWS WAF.
+- Monitor the system using Amazon CloudWatch and send alerts through Amazon SNS.
+
+---
+
+## 8. Expected Outcomes
+
+- Stable 24/7 system operation.
+- Scalability to support increasing numbers of users.
+- Strong security and data protection.
+- Faster deployment using Docker containers and Amazon ECS.
+- High database availability through Amazon RDS Multi-AZ.
+- Easy maintenance and future upgrades.

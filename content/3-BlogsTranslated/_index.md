@@ -1,31 +1,22 @@
 ---
+
 title: "Translated Blogs"
 date: 2024-01-01
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
----
+--------------------
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+During my internship, I researched, translated, and studied technical articles from the AWS Blogs to deepen my understanding of AWS services, software architecture, and cloud-based application deployment solutions. Below is a list of the blogs I completed.
 
-This section will list and introduce the blogs you have translated. For example:
+### [Blog 1 - Introducing Open Source Skills for AWS SDK Best Practices](3.1-Blog1/)
 
-###  [Blog 1 - Getting started with healthcare data lakes: Using microservices](3.1-Blog1/)
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+This blog introduces **AWS SDK Skills**, a component of the **Open Source Agentic Tools for AWS**, which enables AI agents and development tools to follow AWS SDK best practices. It explains how these skills help generate more accurate code, use AWS APIs correctly, and reduce common development errors.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+### [Blog 2 - Securing .NET Microservices on AWS with Microsoft Entra ID](3.2-Blog2/)
 
-###  [Blog 3 - ...](3.3-Blog3/)
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+This blog explains how to secure **.NET Microservices** running on AWS by integrating **Microsoft Entra ID (Azure Active Directory)** with the **OAuth 2.0 Client Credentials Flow**. It focuses on authentication and authorization between microservices, enabling the development of secure, scalable, and modern microservice-based applications.
 
-###  [Blog 4 - ...](3.4-Blog4/)
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+### [Blog 3 - Improving Application Performance with CDN Caching in AWS Amplify Hosting](3.3-Blog3/)
 
-###  [Blog 5 - ...](3.5-Blog5/)
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
-
-###  [Blog 6 - ...](3.6-Blog6/)
-This blog introduces how to start building a data lake in the healthcare sector by applying a microservices architecture. You will learn why data lakes are important for storing and analyzing diverse healthcare data (electronic medical records, lab test data, medical IoT devices…), how microservices help make the system more flexible, scalable, and easier to maintain. The article also guides you through the steps to set up the environment, organize the data processing pipeline, and ensure compliance with security & privacy standards such as HIPAA.
+This blog introduces the latest **CDN Caching** enhancements in **AWS Amplify Hosting** designed to optimize web application performance. It explains how Amplify leverages **Amazon CloudFront** to increase cache hit rates, reduce requests to the origin server, improve application responsiveness, and deliver a better user experience without requiring significant changes to the application's source code.
