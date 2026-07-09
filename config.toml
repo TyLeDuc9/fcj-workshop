@@ -1,9 +1,9 @@
-baseURL = "https://workshop-sample.fcjuni.com/"
+baseURL = "https://tyleduc9.github.io/fcj-workshop/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
 
-# Change the default theme to be use when building the site with Hugo
+# Change the default theme to be use when building the site with Hugogit add .
 theme = "hugo-theme-learn"
 
 # For search functionality
